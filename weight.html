@@ -15,25 +15,35 @@
       <div id="top" class="flex items-center gap-2 mb-4">
         <input
           type="number"
+          id="inputBox"
           class="border border-gray-300 p-2 rounded-md"
           placeholder="Enter value"
         />
         <p class="text-xl font-bold">=</p>
         <input
           type="number"
+          id="outputBox"
           class="border border-gray-300 p-2 rounded-md"
           placeholder="Converted value"
           disabled
         />
       </div>
       <div id="bottom" class="flex items-center gap-4">
-        <select class="border border-gray-300 p-2 rounded-md">
-          <option value="Meters">lbs</option>
-          <option value="Kilometers">Kg</option>
+        <select
+          id="fromUnit"
+          class="border border-gray-300 p-2 rounded-md"
+          onchange="updateConversion()"
+        >
+          <option value="pounds">lbs</option>
+          <option value="kilograms">Kg</option>
         </select>
-        <select class="border border-gray-300 p-2 rounded-md">
-          <option value="Meters">lbs</option>
-          <option value="Kilometers">Kg</option>
+        <select
+          class="border border-gray-300 p-2 rounded-md"
+          id="toUnit"
+          onchange="updateConversion()"
+        >
+          <option value="pounds">lbs</option>
+          <option value="kilograms">Kg</option>
         </select>
       </div>
     </main>
