@@ -17,23 +17,34 @@
           type="number"
           class="border border-gray-300 p-2 rounded-md"
           placeholder="Enter value"
+          oninput="updateConversion()"
+          id="inputBox"
         />
         <p class="text-xl font-bold">=</p>
         <input
           type="number"
           class="border border-gray-300 p-2 rounded-md"
           placeholder="Converted value"
+          id="outputBox"
           disabled
         />
       </div>
       <div id="bottom" class="flex items-center gap-4">
-        <select class="border border-gray-300 p-2 rounded-md">
-          <option value="Meters">C</option>
-          <option value="Kilometers">F</option>
+        <select
+          class="border border-gray-300 p-2 rounded-md"
+          id="fromUnit"
+          onchange="updateConversion()"
+        >
+          <option value="c">C</option>
+          <option value="f">F</option>
         </select>
-        <select class="border border-gray-300 p-2 rounded-md">
-          <option value="Meters">C</option>
-          <option value="Kilometers">F</option>
+        <select
+          class="border border-gray-300 p-2 rounded-md"
+          id="toUnit"
+          onchange="updateConversion()"
+        >
+          <option value="c">C</option>
+          <option value="f">F</option>
         </select>
       </div>
     </main>
