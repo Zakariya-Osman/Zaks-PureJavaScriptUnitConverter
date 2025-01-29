@@ -18,6 +18,7 @@
           id="inputBox"
           class="border border-gray-300 p-2 rounded-md"
           placeholder="Enter value"
+          oninput="updateConversion()"
         />
         <p class="text-xl font-bold">=</p>
         <input
@@ -34,16 +35,16 @@
           class="border border-gray-300 p-2 rounded-md"
           onchange="updateConversion()"
         >
-          <option value="pounds">lbs</option>
-          <option value="kilograms">Kg</option>
+          <option value="lb">lbs</option>
+          <option value="kg">Kg</option>
         </select>
         <select
           class="border border-gray-300 p-2 rounded-md"
           id="toUnit"
           onchange="updateConversion()"
         >
-          <option value="pounds">lbs</option>
-          <option value="kilograms">Kg</option>
+          <option value="lb">lbs</option>
+          <option value="kg">Kg</option>
         </select>
       </div>
     </main>
