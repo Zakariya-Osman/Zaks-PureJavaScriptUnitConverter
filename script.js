@@ -56,21 +56,13 @@
 
 // console.log(document.getElementById("top").values);
 
-//load the nav
-// Function to load the navigation dynamically
-function loadNav() {
-  fetch("../nav.html") // Load nav.html
-    .then((response) => response.text())
-    .then((html) => {
-      document.getElementById("nav-container").innerHTML = html;
-    })
-    .catch((error) => console.error("Error loading navigation:", error));
-}
+//=========================================================================
+//=========================================================================
+//=========================================================================
 
-// Run function when page loads
-document.addEventListener("DOMContentLoaded", loadNav);
-
-// Higher-Order Function that returns a conversion function
+///////////////////////////////////////////////////////////////////////////////
+//##          Higher-Order Function that returns a conversion function    /////
+///////////////////////////////////////////////////////////////////////////////
 const getConversionFunction = (fromUnit, toUnit) => {
   const conversions = {
     "miles-km": (val) => val * 1.60934,
@@ -107,3 +99,19 @@ function updateConversion() {
     outputBox.value = ""; // Clear output if input is invalid
   }
 }
+
+/////////////////////////////////////////////////////////////////////
+//##                    load the nav                            /////
+/////////////////////////////////////////////////////////////////////
+// Function to load the navigation dynamically
+function loadNav() {
+  fetch("../nav.html") // Load nav.html
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("nav-container").innerHTML = html;
+    })
+    .catch((error) => console.error("Error loading navigation:", error));
+}
+
+// Run function when page loads
+document.addEventListener("DOMContentLoaded", loadNav);
